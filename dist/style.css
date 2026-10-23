@@ -36,6 +36,7 @@ button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px dashe
 .story-lines{padding:15px 0 0 6px;animation:story-in .2s ease-out both}
 .story-copy{font-size:clamp(22px,1.9vw,32px);line-height:1.22;letter-spacing:.35px}
 .story-copy p{margin:0 0 10px;white-space:nowrap}.story-copy .story-answer{font-weight:600}.story-copy .last-line{margin-top:23px;margin-bottom:0}
+.story-copy .story-qualification{white-space:normal}
 .story-keyword{display:inline;border:0;padding:0;background:none;line-height:inherit;letter-spacing:inherit;position:relative;transition:color .18s}
 .story-keyword:hover,.story-keyword:focus-visible{color:#ffc5a1}.story-keyword:focus-visible{outline-offset:2px}
 .help-words{position:relative;display:inline-block}
