@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 180" fill="none" stroke="#f4e7c8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+<title>Poor Disko Duck</title>
+<g transform="translate(25 0) scale(.8)">
+<path d="m14 19-3 39m3-34c4-14 25-9 23 4s-20 16-24 3"/>
+<path d="M60 17C42 13 41 44 58 42s19-25 2-25"/>
+<path d="M92 17C74 13 72 45 90 43s19-24 2-26"/>
+<path d="m114 19-2 24m2-13c4-12 12-14 18-10"/>
+</g>
+<g transform="translate(1 53)">
+<path d="m29 0-3 42m1-22C9 8 3 32 11 39s16-3 17-11"/>
+<path d="m44 22-2 20m3-34v1"/>
+<path d="M73 21C58 11 50 27 64 31s10 18-8 12"/>
+<path d="m91 0-3 43m24-24-22 14 20 12"/>
+<path d="M139 21C119 11 116 45 134 46s23-24 5-25"/>
+</g>
+<g transform="translate(10 111)">
+<path d="M40 0 37 46M38 24C15 10 10 37 18 44s19 0 20-14"/>
+<path d="m55 23-2 14c-2 18 22 13 22-2l2-13-3 26"/>
+<path d="M109 25C85 9 80 54 108 45"/>
+<path d="m126 0-5 48m24-28-22 15 21 14"/>
+</g>
+</svg>

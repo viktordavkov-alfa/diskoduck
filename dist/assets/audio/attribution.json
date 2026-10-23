@@ -1,0 +1,140 @@
+{
+  "project": "Poor Disko Duck",
+  "licenseVerification": {
+    "artistFaq": "https://incompetech.com/music/royalty-free/faq.html",
+    "artistLicensePage": "https://incompetech.com/music/royalty-free/licenses/",
+    "licenseDeed": "https://creativecommons.org/licenses/by/4.0/",
+    "observedAttribution": "The current official track-page HTML renders the same CC BY 4.0 attribution for each catalog track; the artist FAQ confirms this credit format.",
+    "commercialSelfHosting": "CC BY 4.0 permits copying and redistribution in any medium for commercial purposes. Keep visible credit, title, artist/source links and license link; do not imply endorsement or impose additional restrictions on the music.",
+    "changes": "None; files are official original MP3s.",
+    "verificationDate": "2026-10-17"
+  },
+  "tracks": [
+    {
+      "title": "Club Diver",
+      "slug": "club-diver",
+      "bpm": 140,
+      "durationCatalog": "2:26",
+      "isrc": "USUAN1200020",
+      "genreAssessment": "Dark, driving Euro-club / industrial electronica; the fastest and heaviest selection.",
+      "artist": "Kevin MacLeod",
+      "artistUrl": "https://incompetech.com/",
+      "license": "Creative Commons Attribution 4.0 International",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1200020",
+      "catalogUrl": "https://incompetech.com/music/royalty-free/pieces.json",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Club%20Diver.mp3",
+      "localFile": "./club-diver.mp3",
+      "changes": "None. Original MP3 downloaded unchanged from the artist website.",
+      "retrievedDate": "2026-10-17",
+      "attribution": "\"Club Diver\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
+      "httpContentType": "application/octet-stream",
+      "httpLastModified": "Sun, 15 Feb 2015 14:12:10 GMT",
+      "httpContentLength": 5829600,
+      "bytes": 5829600,
+      "sha256": "3b8d82e6ed69cbd540e69794a252b7dced75a0af838914a094182115af3effb6",
+      "audioVerification": {
+        "fullDecode": "passed",
+        "format": {
+          "duration": "145.684900",
+          "size": "5829600",
+          "bit_rate": "320121"
+        },
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 2
+          }
+        ]
+      }
+    },
+    {
+      "title": "Dance Monster",
+      "slug": "dance-monster",
+      "bpm": 120,
+      "durationCatalog": "3:20",
+      "isrc": "USUAN1100272",
+      "genreAssessment": "Bright, driving dance electronica; a lighter playful groove.",
+      "artist": "Kevin MacLeod",
+      "artistUrl": "https://incompetech.com/",
+      "license": "Creative Commons Attribution 4.0 International",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100272",
+      "catalogUrl": "https://incompetech.com/music/royalty-free/pieces.json",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dance%20Monster.mp3",
+      "localFile": "./dance-monster.mp3",
+      "changes": "None. Original MP3 downloaded unchanged from the artist website.",
+      "retrievedDate": "2026-10-17",
+      "attribution": "\"Dance Monster\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
+      "httpContentType": "application/octet-stream",
+      "httpLastModified": "Sun, 15 Feb 2015 14:09:00 GMT",
+      "httpContentLength": 7396101,
+      "bytes": 7396101,
+      "sha256": "cc34a2551ba2caef00469ecff3b7a86dae9e85f4f6fd3a8469724139bfed52a6",
+      "audioVerification": {
+        "fullDecode": "passed",
+        "format": {
+          "duration": "200.097959",
+          "size": "7396101",
+          "bit_rate": "295699"
+        },
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 2
+          },
+          {
+            "codec_name": "mjpeg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Shiny Tech",
+      "slug": "shiny-tech",
+      "bpm": 138,
+      "durationCatalog": "3:43",
+      "isrc": "USUAN1100078",
+      "genreAssessment": "Fast, energetic techno-pop dance with bright synthesizers; a strong fit for a neon disco page.",
+      "artist": "Kevin MacLeod",
+      "artistUrl": "https://incompetech.com/",
+      "license": "Creative Commons Attribution 4.0 International",
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1100078",
+      "catalogUrl": "https://incompetech.com/music/royalty-free/pieces.json",
+      "downloadUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Shiny%20Tech.mp3",
+      "localFile": "./shiny-tech.mp3",
+      "changes": "None. Original MP3 downloaded unchanged from the artist website.",
+      "retrievedDate": "2026-10-17",
+      "attribution": "\"Shiny Tech\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
+      "httpContentType": "application/octet-stream",
+      "httpLastModified": "Sun, 15 Feb 2015 14:11:34 GMT",
+      "httpContentLength": 9014582,
+      "bytes": 9014582,
+      "sha256": "1889779e953b392ae07c57219066e2a14407e796eaa5a167da5cea6fc622d357",
+      "audioVerification": {
+        "fullDecode": "passed",
+        "format": {
+          "duration": "222.667778",
+          "size": "9014582",
+          "bit_rate": "323875"
+        },
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 2
+          },
+          {
+            "codec_name": "mjpeg"
+          }
+        ]
+      }
+    }
+  ]
+}

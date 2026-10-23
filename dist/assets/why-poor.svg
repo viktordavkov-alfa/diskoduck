@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 108" fill="none" stroke="#f4e7c8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<title>why is he poor?</title>
+<style>.pen-stroke{opacity:0;stroke-dasharray:1;stroke-dashoffset:1;animation:write var(--duration) linear var(--delay) forwards}.circle{stroke-width:1.45}@keyframes write{from{opacity:1}to{opacity:1;stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){.pen-stroke{animation:none;opacity:1;stroke-dashoffset:0}}</style>
+<g transform="translate(22.0 30)">
+<path class="pen-stroke" pathLength="1" d="M2 15Q0 35 8 29L12 18Q12 36 19 28L22 14" transform="translate(0 0)" style="--delay:0.350s;--duration:0.201s"/>
+<path class="pen-stroke" pathLength="1" d="M4 2 2 30 4 22C7 10 14 13 13 21L12 30" transform="translate(23 0.4)" style="--delay:0.569s;--duration:0.191s"/>
+<path class="pen-stroke" pathLength="1" d="M3 14Q0 34 10 27L14 14 10 34Q6 45 1 38" transform="translate(40 -0.35)" style="--delay:0.778s;--duration:0.196s"/>
+<path class="pen-stroke" pathLength="1" d="M3 15 2 30" transform="translate(68 -0.1)" style="--delay:0.991s;--duration:0.052s"/>
+<path class="pen-stroke" pathLength="1" d="M4 6 4.3 6.5" transform="translate(68 -0.1)" style="--delay:1.061s;--duration:0.062s"/>
+<path class="pen-stroke" pathLength="1" d="M12 15C4 8-1 21 7 23 19 26 10 36 1 29" transform="translate(76 0)" style="--delay:1.141s;--duration:0.191s"/>
+<path class="pen-stroke" pathLength="1" d="M4 2 2 30 4 22C7 10 14 13 13 21L12 30" transform="translate(102 -0.35)" style="--delay:1.350s;--duration:0.191s"/>
+<path class="pen-stroke" pathLength="1" d="M3 23C18 23 15 10 7 14-2 18 2 36 14 28" transform="translate(119 0.25)" style="--delay:1.558s;--duration:0.196s"/>
+<path class="pen-stroke" pathLength="1" d="M4 15 2 41" transform="translate(146 0)" style="--delay:1.772s;--duration:0.052s"/>
+<path class="pen-stroke" pathLength="1" d="M4 21C9 8 19 15 13 26 10 32 4 32 3 26" transform="translate(146 0)" style="--delay:1.842s;--duration:0.191s"/>
+<path class="pen-stroke" pathLength="1" d="M10 14C-2 10-1 32 8 31 17 29 17 13 10 14" transform="translate(163 0.4)" style="--delay:2.050s;--duration:0.206s"/>
+<path class="pen-stroke" pathLength="1" d="M10 14C-2 10-1 32 8 31 17 29 17 13 10 14" transform="translate(180 -0.35)" style="--delay:2.274s;--duration:0.206s"/>
+<path class="pen-stroke" pathLength="1" d="M3 15 2 30 4 21C7 13 10 12 12 16" transform="translate(197 0.25)" style="--delay:2.499s;--duration:0.165s"/>
+<path class="pen-stroke" pathLength="1" d="M1 9C2 0 19 1 14 12 12 17 7 15 7 24" transform="translate(210 -0.1)" style="--delay:2.681s;--duration:0.180s"/>
+<path class="pen-stroke" pathLength="1" d="M7 31 7.3 31.4" transform="translate(210 -0.1)" style="--delay:2.880s;--duration:0.072s"/>
+</g>
+<path class="pen-stroke circle" pathLength="1" style="--delay:3.130s;--duration:.72s" d="M233 84C196 102 69 103 29 83 4 71 5 43 34 29 79 8 207 8 239 30 272 52 252 83 215 92 166 103 77 102 40 91"/>
+</svg>

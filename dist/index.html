@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#245da8">
+  <meta name="description" content="Expensive nights. Empty pockets. Poor Disko Duck has his priorities: disco, drinks, and maybe some food.">
+  <meta property="og:title" content="Poor Disko Duck">
+  <meta property="og:description" content="Disco first. Dinner eventually.">
+  <title>Poor Disko Duck</title>
+  <link rel="canonical" href="https://diskoduck.com/">
+  <meta property="og:url" content="https://diskoduck.com/">
+  <link rel="icon" href="./assets/duck.svg?v=3" type="image/svg+xml">
+  <link rel="preload" href="./assets/paper-duck-cutout-v3.png" as="image">
+  <link rel="preload" href="./assets/paper-reference-v3.png" as="image">
+  <link rel="preload" href="./assets/fonts/caveat-latin.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="./style.css?v=8">
+</head>
+<body>
+  <svg class="chalk-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <filter id="chalk-grain" x="-4%" y="-8%" width="108%" height="116%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" seed="12" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale=".42" xChannelSelector="R" yChannelSelector="G" result="edge"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .55 .55 .55 0 .2" result="dust"/>
+      <feComposite in="edge" in2="dust" operator="in"/>
+    </filter>
+    <symbol id="icon-drink" viewBox="0 0 32 32"><path d="m6 11 2 17 14 .3 2-17M7 11c-5-5 0-10 5-7 2-5 9-2 9 1 6-2 9 6 3 7L6 11Zm18 2c9-2 9 13-1 11M12 15l1 9m5-9-.5 9"/></symbol>
+    <symbol id="icon-ticket" viewBox="0 0 32 32"><path d="m4 9 23-4 2 7c-5 1-4 7 1 7l1 6-24 4-1-7c5-1 4-6-1-6Zm16-2 1 3m0 4 1 3m0 4 1 5"/></symbol>
+    <symbol id="icon-food" viewBox="0 0 32 32"><path d="M4 11c1-10 22-10 24 0ZM3 16l26-1M5 20l22 1M5 25c1 7 20 7 22 0ZM10 8l1-1m6 0 1 1m4-1 1 1"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 32 32"><path d="M4 17c9-2 15-2 23-2M20 7l9 8-8 10"/></symbol>
+    <symbol id="icon-shot" viewBox="0 0 32 40"><path class="shot-fill" d="m6 12 3 23h14l3-23Z"/><path d="m4 7 4 30 16 .3L28 7M4 7c0-5 24-5 24 0s-24 5-24 0ZM7 13c5 3 13 3 18 0"/></symbol>
+    <symbol id="icon-shirt" viewBox="0 0 40 40"><path d="m13 5-7 3-5 9 7 4 4-6-1 22h18l-1-22 4 6 7-4-5-9-7-3c-3 5-11 5-14 0Z"/></symbol>
+  </defs></svg>
+  <main id="dancefloor" aria-label="Poor Disko Duck. Click the duck to change his groove, or drag to make him dance.">
+    <h1 class="sr-only">Poor Disko Duck</h1>
+    <div id="stage" tabindex="0" role="application" aria-label="Dancing duck. Drag to bend his neck. Enter changes the song. Space plays or pauses. S stops. M toggles sound. Keys 1, 2 and 3 choose a song.">
+      <img id="duck-fallback" src="./assets/paper-duck-cutout-v3.png" alt="A long-beaked ivory paper duck, nodding to the music" draggable="false">
+      <img id="duck-front" src="./assets/paper-duck-front-v7.png" alt="" aria-hidden="true" draggable="false">
+    </div>
+    <div class="signature"><img class="wordmark" src="./assets/wordmark.svg?v=4" alt="Poor Disko Duck" width="172" height="180" draggable="false"></div>
+
+    <section class="side-left" aria-label="His story and ways to help">
+      <button id="story-open" class="story-trigger" type="button" aria-controls="story-lines" aria-expanded="false">
+        <span class="question-paper" aria-hidden="true"></span>
+        <span id="story-prompt" class="chalk-text">why is he poor?</span>
+        <span id="story-toggle-mark" class="story-toggle-mark" aria-hidden="true">+</span>
+        <svg class="question-rays chalk-drawing" viewBox="0 0 40 62" fill="none" aria-hidden="true"><path d="m5 16 18-13M9 31l25-2M6 45l19 13"/></svg>
+      </button>
+      <div id="story-lines" class="story-lines" hidden>
+        <div id="story-copy" class="story-copy">
+          <p class="chalk-text story-answer" data-handwrite>He spends every penny at the disco.</p>
+          <p class="chalk-text" data-handwrite>Disco first. Dinner eventually.</p>
+          <p class="chalk-text" data-handwrite>His only qualification is dancing.</p>
+          <p class="chalk-text last-line" data-handwrite>Help him with <span class="help-words"><button type="button" class="story-keyword" data-nudge="help-ticket" aria-controls="help-ticket">tickets</button>, <button type="button" class="story-keyword" data-nudge="help-shot" aria-controls="help-shot">drinks</button> and <button type="button" class="story-keyword" data-nudge="merch-open" aria-controls="merch-open">clothes</button></span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="duck-tab" aria-label="His shots, night-out fund and ways to help">
+      <div class="daily-shots">
+        <p class="chalk-text stat-label">Shots today</p>
+        <div class="shot-row">
+          <div id="shot-glasses" class="shot-glasses" aria-hidden="true">
+            <svg class="chalk-icon"><use href="#icon-shot"/></svg><svg class="chalk-icon"><use href="#icon-shot"/></svg><svg class="chalk-icon"><use href="#icon-shot"/></svg><svg class="chalk-icon"><use href="#icon-shot"/></svg><svg class="chalk-icon"><use href="#icon-shot"/></svg>
+          </div>
+          <strong id="drinks-count" class="chalk-text" aria-live="polite" aria-label="Preview shots today">0</strong>
+        </div>
+      </div>
+      <div class="night-fund">
+        <div class="fund-heading chalk-text"><span>Tonight’s fund</span><span>$0 / $45</span></div>
+        <div class="fund-meter chalk-drawing" role="progressbar" aria-label="Tonight’s fund: checkout is not connected" aria-valuemin="0" aria-valuemax="45" aria-valuenow="0"><span></span></div>
+      </div>
+      <div class="support-actions">
+        <div class="support-group">
+          <button id="help-shot" class="support-button shot-button" type="button" data-help="fund" data-purpose="drinks" aria-controls="fund-view" aria-expanded="false"><svg class="chalk-icon" aria-hidden="true"><use href="#icon-shot"/></svg><span>Buy him a shot · $5</span></button>
+          <p class="action-caption chalk-text">A shot. A wilder dance.</p>
+        </div>
+        <button id="help-ticket" class="support-button ticket-button" type="button" data-help="fund" data-purpose="disco" aria-controls="fund-view" aria-expanded="false"><svg class="chalk-icon" aria-hidden="true"><use href="#icon-ticket"/></svg><span>Buy his ticket · $12</span></button>
+        <button id="merch-open" class="support-button merch-button" type="button" data-help="shop" aria-controls="shop-view" aria-expanded="false"><svg class="chalk-icon" aria-hidden="true"><use href="#icon-shirt"/></svg><span>Shop his merch</span><svg class="chalk-icon merch-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+      </div>
+      <div id="help-panels" class="help-panels" hidden>
+        <button id="help-close" class="help-close" type="button" aria-label="Close support options">close <span aria-hidden="true">×</span></button>
+        <section id="fund-view" class="inline-fund" aria-labelledby="fund-title" hidden>
+          <h2 id="fund-title" class="chalk-text" tabindex="-1">a little disco money.</h2>
+          <fieldset class="fund-options">
+            <legend class="sr-only">Choose one-time support in US dollars</legend>
+            <label><input type="radio" name="support" value="round" checked><span class="fund-option"><strong>$5</strong><span>a shot</span></span></label>
+            <label><input type="radio" name="support" value="ticket"><span class="fund-option"><strong>$12</strong><span>his ticket</span></span></label>
+            <label><input type="radio" name="support" value="night"><span class="fund-option"><strong>$20</strong><span>big night</span></span></label>
+          </fieldset>
+          <p id="fund-caption" class="fund-caption chalk-text" aria-live="polite">A first round. A fresh start. Probably.</p>
+          <button id="fund-checkout" class="checkout-button" type="button" disabled>checkout opens soon</button>
+          <button id="preview-shot" class="preview-shot chalk-text" type="button">try a shot · preview</button>
+          <p id="shot-status" class="shot-status" aria-live="polite">Just his reaction. No payment.</p>
+          <p class="payment-note">One-time support · USD<br>For this duck and the creator behind him.</p>
+        </section>
+        <section id="shop-view" class="inline-shop" aria-labelledby="shop-title" hidden>
+          <h2 id="shop-title" class="chalk-text" tabindex="-1">his face. your stuff.</h2>
+          <div class="shop-products">
+            <article class="product">
+              <div class="product-art print-art" role="img" aria-label="Preview of a blue Poor Disko Duck poster"><div class="mini-poster"><img class="poster-duck" src="./assets/paper-duck-cutout-v3.png" alt="" draggable="false"><img class="poster-mark" src="./assets/wordmark.svg?v=4" alt="" draggable="false"></div></div>
+              <h3>the wall duck</h3><p>Print + wallpapers</p><button data-product="print" type="button" disabled>coming soon</button>
+            </article>
+            <article class="product">
+              <div class="product-art shirt-art" role="img" aria-label="Preview of a cream Poor Disko Duck T-shirt">
+                <svg class="shirt-mockup" viewBox="0 0 200 220" aria-hidden="true"><path d="m65 22-28 12L5 80l31 23 18-24-4 124h100l-4-124 18 24 31-23-32-46-28-12c-11 20-59 20-70 0Z" fill="#f5ebd7" stroke="#d6c8ad" stroke-width="1.5"/><path d="M65 22c8 28 62 28 70 0M54 79l4-31m88 31-4-31M51 196h98" fill="none" stroke="#d6c8ad" stroke-width="1.5"/><defs><clipPath id="shirt-print"><rect x="72" y="66" width="56" height="70"/></clipPath></defs><rect x="72" y="66" width="56" height="70" fill="#395b92"/><image href="./assets/paper-duck-cutout-v3.png" x="51" y="64" width="96" height="72" clip-path="url(#shirt-print)"/><text x="100" y="151" text-anchor="middle" fill="#244574" font-size="7.5" font-family="Arial,sans-serif">disco first.</text><text x="100" y="161" text-anchor="middle" fill="#244574" font-size="7.5" font-family="Arial,sans-serif">dinner eventually.</text></svg>
+              </div>
+              <h3>the going-out shirt</h3><p>His priorities. Yours.</p><button data-product="shirt" type="button" disabled>coming soon</button>
+            </article>
+          </div>
+        </section>
+      </div>
+    </aside>
+    <section id="music-player" class="music-player" aria-label="Disko Duck music player">
+      <p class="music-label chalk-text">His music</p>
+      <details id="song-picker" class="song-picker">
+        <summary aria-label="Choose a song">
+          <svg class="cassette-art" viewBox="0 0 288 108" aria-hidden="true">
+            <defs><pattern id="cassette-grain" patternUnits="userSpaceOnUse" width="98" height="80"><image href="./assets/paper-reference-v3.png" x="-835" y="-150" width="1536" height="1024"/></pattern></defs>
+            <rect x="1" y="1" width="286" height="106" rx="6" fill="#f5e8c8" stroke="#d7c9ad"/><rect x="2" y="2" width="284" height="104" rx="5" fill="url(#cassette-grain)" opacity=".22"/>
+            <g fill="#253f51"><circle cx="10" cy="10" r="3.2"/><circle cx="278" cy="10" r="3.2"/><circle cx="10" cy="98" r="3.2"/><circle cx="278" cy="98" r="3.2"/></g>
+            <path d="M30 44h228v36H30Z" fill="#d8c8a8" stroke="#a99e84"/>
+            <path d="M97 48h94v28H97Z" fill="#63513d"/><path d="M120 48h49v28h-49Z" fill="#342e27"/><path d="M121 48c10 10 10 18 0 28m47-28c-10 10-10 18 0 28" fill="none" stroke="#897357" stroke-width="7"/>
+            <g class="cassette-reel" style="transform-origin:63px 62px"><circle cx="63" cy="62" r="18" fill="#243f52" stroke="#a79777" stroke-width="4"/><path d="M63 45v8m0 18v8M46 62h8m18 0h8M51 50l6 6m12 12 6 6m-24 0 6-6m12-12 6-6" stroke="#b5a57f" stroke-width="3"/><circle cx="63" cy="62" r="7" fill="#243f52"/></g>
+            <g class="cassette-reel" style="transform-origin:225px 62px"><circle cx="225" cy="62" r="18" fill="#243f52" stroke="#a79777" stroke-width="4"/><path d="M225 45v8m0 18v8M208 62h8m18 0h8M213 50l6 6m12 12 6 6m-24 0 6-6m12-12 6-6" stroke="#b5a57f" stroke-width="3"/><circle cx="225" cy="62" r="7" fill="#243f52"/></g>
+          </svg>
+          <span class="cassette-title"><span id="song-title" class="chalk-text">Club Diver</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></span>
+        </summary>
+        <div class="song-menu"><div id="song-list" aria-label="Available songs"></div><a href="./music-credits.html" target="_blank" rel="noopener">Music by Kevin MacLeod · credits ↗</a></div>
+      </details>
+      <input id="song-progress" class="song-progress" type="range" min="0" max="200" value="0" step=".1" aria-label="Song position" disabled>
+      <div class="player-controls" role="group" aria-label="Playback controls">
+        <button id="music-previous" type="button" aria-label="Previous song" title="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5 8 12l10 7Z"/></svg></button>
+        <button id="music-play" class="play-button" type="button" aria-label="Play music" title="Play" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="player-play-icon" d="m8 4 12 8-12 8Z"/><path id="player-pause-icon" d="M7 5h3v14H7zM14 5h3v14h-3z" hidden/></svg></button>
+        <button id="music-stop" type="button" aria-label="Stop music and make the duck look at you" title="Stop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx=".4"/></svg></button>
+        <button id="music-next" type="button" aria-label="Next song" title="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l10 7-10 7Z"/></svg></button>
+        <span id="song-time" class="song-time" aria-hidden="true">0:00 / 3:20</span>
+      </div>
+      <p class="player-note chalk-text">Stop the music. He stops too.</p>
+      <p id="player-status" class="player-status" role="status"></p>
+    </section>
+    <p id="announcement" class="sr-only" aria-live="polite"></p>
+  </main>
+  <noscript><style>#duck-fallback{height:117%;width:auto;max-width:150%;left:52%;top:-2.4%;transform:translateX(-50%)}.story-lines{display:block!important}</style></noscript>
+  <script type="module" src="./app.js?v=8"></script>
+</body>
+</html>
