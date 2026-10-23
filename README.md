@@ -4,7 +4,11 @@ Interactive paper duck, music player, story, and merchandise previews. Productio
 
 ## Hosting
 
-The website is static. Vercel serves `dist/` and runs `npm run check` before deployment. No dependency installation, backend, or runtime secrets are required. The production branch is `main`; Vercel deploys updates from GitHub. The `www` domain redirects to the apex domain.
+The website is static. Vercel serves `dist/` and runs `npm run check` before deployment. No dependency installation, backend, or runtime secrets are required. The source branch is `main`. The `www` domain redirects to the apex domain.
+
+The live domain is assigned to Vercel project `diskoduck` in team `viktordavkov-5502s-projects`. Its production deployment was created from GitHub through the Vercel connector. DNS remains at Namecheap.
+
+Automatic GitHub deployments are prepared in the separate `diskoduck-live` project, but the custom domains still belong to `diskoduck`. Automatic publishing to `diskoduck.com` remains pending Vercel dashboard authentication: connect the production `diskoduck` project to this repository under Settings → Git, or move both domains to the linked project. Until then, publish production updates explicitly through the Vercel connector using the latest `main` commit.
 
 ## Files
 
