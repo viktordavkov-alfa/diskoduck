@@ -1,1 +1,1 @@
-{"name":"poor-disko-duck","version":"1.2.0","private":true,"type":"module","scripts":{"check":"node scripts/check.mjs && node scripts/playback-check.mjs"}}
+{"name":"poor-disko-duck","version":"1.2.0","private":true,"type":"module","scripts":{"check":"node scripts/check.mjs && node scripts/playback-check.mjs && node scripts/intro-check.mjs"}}

@@ -5,8 +5,8 @@ import {execFileSync} from 'node:child_process';
 import {layout,advanceSpring,PALETTES,makePose,deformUV,pickUV} from '../dist/puppet.js';
 import {TRACKS} from '../dist/music.js';
 const root=path.resolve(import.meta.dirname,'..');
-for(const file of ['app.js','puppet.js','music.js','story.js','commerce.js','chalk.js','nudges.js','player.js','party.js'])execFileSync(process.execPath,['--check',path.join(root,'dist',file)]);
-for(const file of ['index.html','style.css','app.js','puppet.js','music.js','story.js','commerce.js','chalk.js','nudges.js','player.js','party.js']){
+for(const file of ['app.js','puppet.js','music.js','story.js','commerce.js','chalk.js','nudges.js','player.js','party.js','intro.js','intro-motion.js'])execFileSync(process.execPath,['--check',path.join(root,'dist',file)]);
+for(const file of ['index.html','style.css','app.js','puppet.js','music.js','story.js','commerce.js','chalk.js','nudges.js','player.js','party.js','intro.js','intro-motion.js','intro.css']){
  const source=fs.readFileSync(path.join(root,'dist',file),'utf8');
  for(const m of source.matchAll(/(?:src=|href=|url\(|from\s+)["'](\.\/[^"')]+)["']/g))assert(fs.existsSync(path.resolve(root,'dist',m[1].split('?')[0])),`Missing asset ${m[1]}`);
 }

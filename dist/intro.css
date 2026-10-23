@@ -1,0 +1,21 @@
+/* The loader uses the site's paper, blue and hand-lettering, with no new assets. */
+#duck-intro{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;overflow:hidden;background:#245da8;color:#fffaf0;isolation:isolate;opacity:1;transition:opacity .36s ease;touch-action:none}
+html.intro-pending #duck-intro{display:flex!important}
+html.intro-pending #dancefloor{visibility:hidden;opacity:0;pointer-events:none}
+html.intro-leaving #duck-intro{opacity:0;pointer-events:none}
+html.intro-leaving #dancefloor{visibility:visible;opacity:1;transition:opacity .36s ease}
+.intro-paper{position:absolute;inset:0;width:100%;height:100%;opacity:.065;pointer-events:none;z-index:-1}
+.intro-scene{width:100%;display:flex;flex-direction:column;align-items:center;transform:translateY(-2vh)}
+.intro-art{width:min(660px,86vw);height:auto;display:block;overflow:visible}
+.intro-lines{fill:none;stroke:#fff3d6;stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round;filter:url(#intro-chalk-grain)}
+.intro-lines [data-chalk="coral"]{stroke:#ff9565;stroke-width:4.2}
+.intro-lines .intro-eye{stroke-width:4.7}
+.intro-stroke{visibility:hidden}
+.intro-stick{filter:url(#intro-chalk-shadow);will-change:transform}
+.intro-dust{pointer-events:none}
+.intro-caption{font-family:var(--chalk,cursive);font-size:clamp(24px,2.2vw,33px);font-weight:500;line-height:1.2;letter-spacing:.7px;margin:-2px 0 0;opacity:0;transform:translateY(3px);transition:opacity .24s ease,transform .24s ease}
+.intro-caption.is-visible{opacity:1;transform:translateY(0)}
+.intro-signature{position:absolute;bottom:max(6%,env(safe-area-inset-bottom));left:0;width:100%;margin:0;text-align:center;font-family:var(--chalk,cursive);font-size:18px;letter-spacing:1.8px;font-weight:500;color:#fff3d6}
+@media(max-width:700px){.intro-scene{transform:translateY(-3vh)}.intro-art{width:94vw;max-width:520px}.intro-caption{margin:8px 0 0}.intro-signature{bottom:max(8%,env(safe-area-inset-bottom));font-size:16px}}
+@media(max-height:500px) and (orientation:landscape){.intro-art{width:min(440px,60vw);max-height:65svh}.intro-scene{transform:translateY(-3vh)}.intro-caption{font-size:23px;margin:-3px 0 0}.intro-signature{bottom:3%;font-size:15px}}
+@media(prefers-reduced-motion:reduce){#duck-intro,.intro-caption,html.intro-leaving #dancefloor{transition:none}.intro-stick,.intro-dust{display:none}}

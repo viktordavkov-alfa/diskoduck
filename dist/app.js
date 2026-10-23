@@ -133,6 +133,7 @@ stage.addEventListener('pointerup',release);
 for(const eventName of ['pointercancel','lostpointercapture'])stage.addEventListener(eventName,()=>{state.drag=null;stage.classList.remove('dragging');});
 stage.addEventListener('pointerleave',()=>{if(!state.drag){state.hover.x=0;state.hover.y=0;stage.classList.remove('over-duck');}});
 addEventListener('keydown',event=>{
+  if(document.documentElement.classList.contains('intro-pending'))return;
   if(event.repeat||event.altKey||event.ctrlKey||event.metaKey)return;
   if(event.target.closest('.side-left,.duck-tab,.music-player,button,input,select,textarea,a,[contenteditable="true"]'))return;
   if(event.code==='Space'){event.preventDefault();toggle();}

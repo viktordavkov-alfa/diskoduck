@@ -4,6 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#245da8">
+  <script>
+    document.documentElement.classList.add('intro-pending');
+    window.__duckIntroWatchdog=setTimeout(function(){
+      document.documentElement.classList.remove('intro-pending','intro-leaving');
+      document.getElementById('dancefloor')?.removeAttribute('inert');
+      document.getElementById('duck-intro')?.remove();
+    },5200);
+  </script>
+  <style>
+    #duck-intro{display:none}
+    html.intro-pending #duck-intro{display:flex!important;position:fixed;inset:0;z-index:1000;background:#245da8}
+    html.intro-pending #dancefloor{visibility:hidden;opacity:0}
+  </style>
   <meta name="description" content="Expensive nights. Empty pockets. Poor Disko Duck has his priorities: disco, drinks, and maybe some food.">
   <meta property="og:title" content="Poor Disko Duck">
   <meta property="og:description" content="His only qualification is dancing and DRINKING.">
@@ -17,8 +30,52 @@
   <link rel="preload" href="./assets/paper-reference-v3.png" as="image">
   <link rel="preload" href="./assets/fonts/caveat-latin.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="./style.css?v=9">
+  <link rel="stylesheet" href="./intro.css?v=1">
+  <link rel="modulepreload" href="./intro-motion.js?v=1">
+  <script type="module" src="./intro.js?v=1"></script>
 </head>
 <body>
+  <div id="duck-intro" role="status" aria-live="polite" aria-label="Drawing Disko Duck. Press Escape to skip." hidden>
+    <svg class="intro-paper" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><filter id="intro-paper-grain"><feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="9"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#intro-paper-grain)" opacity=".75"/></svg>
+    <div class="intro-scene">
+      <svg class="intro-art" viewBox="30 25 560 420" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="intro-chalk-grain" x="-5%" y="-6%" width="110%" height="112%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="18" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.1" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .75 .75 .75 0 -.35" result="grain"/>
+            <feComposite in="rough" in2="grain" operator="in"/>
+          </filter>
+          <filter id="intro-chalk-shadow" x="-35%" y="-60%" width="180%" height="230%"><feDropShadow dx="1.5" dy="3" stdDeviation="1.8" flood-color="#123667" flood-opacity=".3"/></filter>
+          <linearGradient id="intro-ivory" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff9e9"/><stop offset=".55" stop-color="#f1e2c4"/><stop offset="1" stop-color="#d9c6a5"/></linearGradient>
+          <linearGradient id="intro-coral" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffbd90"/><stop offset=".55" stop-color="#ff9565"/><stop offset="1" stop-color="#da704b"/></linearGradient>
+        </defs>
+        <g class="intro-lines">
+          <path class="intro-stroke" data-stroke="outline" data-chalk="ivory" d="M462 390 C456 373 441 342 438 310 L433 279 C431 261 434 247 440 229 L450 206 L455 173 L448 150 L435 126 L410 111 L389 102 L368 106 L350 116 L337 133 L328 152 L325 174 L326 185"/>
+          <path class="intro-stroke" data-stroke="crest" data-chalk="ivory" d="M389 102 L399 77 L422 54 L415 69 L438 53 L414 82 L405 102"/>
+          <path class="intro-stroke" data-stroke="neck" data-chalk="ivory" d="M360 240 C359 259 368 278 380 298 C387 319 389 351 397 387"/>
+          <path class="intro-stroke intro-eye" data-stroke="eye-left" data-chalk="ivory" d="M348 156 C352 156 352 164 348 164 C344 164 344 156 348 156"/>
+          <path class="intro-stroke intro-eye" data-stroke="eye-right" data-chalk="ivory" d="M423 180 C427 180 427 188 423 188 C419 188 419 180 423 180"/>
+          <path class="intro-stroke" data-stroke="beak" data-chalk="coral" d="M326 183 C289 197 248 209 207 220 L88 252 Q76 259 78 267 Q83 274 100 271 L305 242 L360 231 L326 183"/>
+          <path class="intro-stroke" data-stroke="mouth" data-chalk="coral" d="M82 266 Q169 257 286 231"/>
+          <path class="intro-stroke" data-stroke="nostril" data-chalk="coral" d="M329 208 l-6 3"/>
+        </g>
+        <g class="intro-dust"/>
+        <g class="intro-stick" data-stick="ivory" transform="translate(493 403) rotate(28)">
+          <path d="M2-5 7-7 43-6 Q48-5 47 0 L46 5 42 7 5 6 0 2Z" fill="url(#intro-ivory)"/>
+          <path d="M2-5 7-7 10-4 8 4 5 6 0 2Z" fill="#fff5dc"/>
+          <path d="m12-4 28 1m-24 6 15 .5m-5-6 2 4" stroke="#bfae8f" opacity=".27" stroke-width=".6" fill="none"/>
+        </g>
+        <g class="intro-stick" data-stick="coral" transform="translate(503 428) rotate(28)">
+          <path d="M2-5 7-7 36-6 Q41-5 40 0 L39 5 35 7 5 6 0 2Z" fill="url(#intro-coral)"/>
+          <path d="M2-5 7-7 10-4 8 4 5 6 0 2Z" fill="#ffc19b"/>
+          <path d="m12-4 20 1m-19 6 16 .5m-5-6 2 4" stroke="#a65038" opacity=".25" stroke-width=".6" fill="none"/>
+        </g>
+      </svg>
+      <p class="intro-caption">there he is.</p>
+    </div>
+    <p class="intro-signature">poor disko duck</p>
+  </div>
   <svg class="chalk-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
     <filter id="chalk-grain" x="-4%" y="-8%" width="108%" height="116%" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" seed="12" result="grain"/>
@@ -143,6 +200,6 @@
     <p id="announcement" class="sr-only" aria-live="polite"></p>
   </main>
   <noscript><style>#duck-fallback{height:117%;width:auto;max-width:150%;left:52%;top:-2.4%;transform:translateX(-50%)}.story-lines{display:block!important}</style></noscript>
-  <script type="module" src="./app.js?v=8"></script>
+  <script type="module" src="./app.js?v=9"></script>
 </body>
 </html>
