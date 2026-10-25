@@ -1,0 +1,1 @@
+25 October 2026: added a discreet full-name design/development credit linking to the verified Viktor Davkov portfolio About page and its creative-project network. No gameplay, audio, controls or asset attributions changed. Approved by user in Game Room cross-project task. Existing deployment build check remains mandatory.
